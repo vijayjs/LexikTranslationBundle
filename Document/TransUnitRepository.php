@@ -327,7 +327,7 @@ class TransUnitRepository extends DocumentRepository
                        ->getQuery()
                        ->getSingleResult();
 
-        if (!isset($result['translations'], $result['translations'][0])) {
+        if (!isset($result['translations'], $result['translations'][0]['updated_at'])) {
             return null;
         }
 
